@@ -12,7 +12,7 @@ export class AppComponent {
   
   constructor(private fb: FormBuilder) {
     this.profileForm = this.fb.group({
-      firstName: ['', Validators.required],
+      firstName: ['', [Validators.required, Validators.pattern('^[1-9][0-9]?$')]],
       lastName: ['']
     });
   }
